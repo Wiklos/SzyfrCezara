@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1525459219 source:c:\users\wiklos1\desktop\projekty\c+++_projekty\vector\szyfr\main.cpp
+	<iostream>
+	<cstdlib>
+	<windows.h>
+	<fstream>
+	<vector>
+
