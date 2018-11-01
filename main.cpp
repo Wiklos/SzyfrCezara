@@ -4,6 +4,8 @@
 #include <fstream>
 #include <vector>
 
+#include "CipherObject.h"
+
 using namespace std;
 
 void OdszyfrujPlik()
@@ -150,6 +152,10 @@ void ZaszyfrujPlik()
 }
 int main()
 {
+    CipherObject *o1 = new CipherObject();
+
+
+
     string nazwaPliku, haslo;
     fstream plik;
     int wybor;
