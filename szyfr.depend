@@ -6,15 +6,21 @@
 	<fstream>
 	<vector>
 
-1541105867 source:c:\users\wiklos1\desktop\projekty\c+++_projekty\szyfrcezara\cipherobject.cpp
+1541192526 source:c:\users\wiklos1\desktop\projekty\c+++_projekty\szyfrcezara\cipherobject.cpp
 	"CipherObject.h"
 	<iostream>
+	<string>
+	<vector>
+	<fstream>
+	<windows.h>
 
-1541106544 c:\users\wiklos1\desktop\projekty\c+++_projekty\szyfrcezara\cipherobject.h
+1541191972 c:\users\wiklos1\desktop\projekty\c+++_projekty\szyfrcezara\cipherobject.h
 	<iostream>
 	<string>
+	<vector>
+	<fstream>
 
-1541106462 source:c:\users\wiklos1\desktop\projekty\c+++_projekty\szyfrcezara\main.cpp
+1541190566 source:c:\users\wiklos1\desktop\projekty\c+++_projekty\szyfrcezara\main.cpp
 	<iostream>
 	<cstdlib>
 	<windows.h>

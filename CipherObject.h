@@ -3,12 +3,26 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
+#include <fstream>
 
 using namespace std;
-struct CipherObject
+class CipherObject
 {
+int key;
+//string text;
+vector < string > text;
+fstream plik;
 
+public:
 CipherObject();
+~CipherObject();
+Encrypt();
+Decrypt();
+void LoadFile(string fileName);
+SaveFile();
+setText(string line);
+
 
 };
 

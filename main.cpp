@@ -152,12 +152,10 @@ void ZaszyfrujPlik()
 }
 int main()
 {
-    CipherObject *o1 = new CipherObject();
+    CipherObject *object = new CipherObject();
 
-
-
-    string nazwaPliku, haslo;
-    fstream plik;
+    //string nazwaPliku, haslo;
+    //fstream plik;
     int wybor;
 
     cout<<"1. Odszyfruj plik"<<endl;
@@ -167,11 +165,13 @@ int main()
 
     if(wybor==1)
     {
-        OdszyfrujPlik();
+        //OdszyfrujPlik();
+        object->Encrypt();
     }
     else if(wybor==2)
     {
-        ZaszyfrujPlik();
+        //ZaszyfrujPlik();
+        object->Decrypt();
     }
     else
     {
@@ -182,58 +182,6 @@ int main()
     cout<<"Koniec"<<endl;
     int koniec;
     cin>>koniec;
-
-
-
-//    cout << "Podaj nazwe pliku" << endl;
-//    cin >> nazwaPliku;
-//nazwaPliku ="aaa";
-
-//    cout << "Podaj haslo" << endl;
-//    cin >> haslo;
-
-//    cout << "Otwieranie " << nazwaPliku+".txt"<< endl;
-//
-//    plik.open(nazwaPliku+".txt", ios::in );
-//    if( plik.good() )
-//    {
-//        string napis;
-//        cout << "Zawartosc pliku:" << endl<<endl;
-//        cout<<"----------"<<endl;
-//        while( !plik.eof() )
-//        {
-//            getline( plik, napis );
-//            cout << napis << endl;
-//        }
-//        plik.close();
-//        cout<<"----------"<<endl;
-//
-//    } else cout << "Error! Nie udalo otworzyc sie pliku!" << endl;
-
-//    cout << "...Deszyfrowanie";
-//    Sleep(500);
-//    cout<<".";
-//    Sleep(500);
-//    cout<<".";
-//    Sleep(500);
-//    cout<<".";
-
-//string tekst; //zmienna do przechowywania naszego tekstu
-//// UWAGA!!!  tekst wprowadzaæ bez spacji
-//int x; // zmienna przechowujaca wspolczynnik przesuniecia <0;26>
-//
-//cout<<"podaj tekst do zaszyfrowania"<<endl;
-//cin >>tekst; //tekst do zaszyfrowania
-//cout<<"podaj wspolczynnik przesuniecia"<<endl;
-//cin >> x; //o ile miejsc zamieniamy litery
-//
-//for(int i=0;i<=tekst.length();i++){
-//if(tekst[i]>=65 && tekst[i]<=90-x) tekst[i]=int(tekst[i])+x; //wielkie liter
-//else if(tekst[i]>=91-x && tekst[i]<=90) tekst[i]=int(tekst[i])-26+x; // wielkie litery
-//else if(tekst[i]>=97 && tekst[i]<=122-x) tekst[i]=int(tekst[i])+x; //ma³e liter
-//else if(tekst[i]>=123-x && tekst[i]<=122) tekst[i]=int(tekst[i])-26+x; //ma³e litery
-//}
-//cout << tekst<<endl;
 
     return 0;
 }
