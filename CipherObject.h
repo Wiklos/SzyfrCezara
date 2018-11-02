@@ -19,6 +19,7 @@ CipherObject();
 ~CipherObject();
 Encrypt();
 Decrypt();
+Crypt();
 void LoadFile(string fileName);
 SaveFile();
 setText(string line);

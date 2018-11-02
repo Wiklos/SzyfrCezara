@@ -18,14 +18,22 @@ cout<<"Destruktor"<<endl;
 CipherObject::Encrypt()
 {
 cout<<"Encrypt"<<endl;
+this->key = 8;
+this->Crypt();
 }
 CipherObject::Decrypt()
+{
+cout<<"Decrypt"<<endl;
+this->key = -8;
+this->Crypt();
+}
+CipherObject::Crypt()
 {
     string fileName;
     string filePath;
 
 
-cout<<"Decrypt"<<endl;
+cout<<"Crypt"<<endl;
 cout<<"File name:";
 cin>>fileName;
 
@@ -33,7 +41,7 @@ this->LoadFile(fileName);
 
 string sciezka = "";
 
-        cout << "...Szyfrowanie...";
+        cout << "...Szyfrowanie";
     Sleep(500);
     cout<<".";
     Sleep(500);
@@ -50,14 +58,16 @@ string sciezka = "";
         tekst = this->text[j];
         for(int i=0; i<=tekst.length(); i++)
         {
-            if(tekst[i]>=65 && tekst[i]<=90-x)
-                tekst[i]=int(tekst[i])+x; //wielkie liter
-            else if(tekst[i]>=91-x && tekst[i]<=90)
-                tekst[i]=int(tekst[i])-26+x; // wielkie litery
-            else if(tekst[i]>=97 && tekst[i]<=122-x)
-                tekst[i]=int(tekst[i])+x; //male liter
-            else if(tekst[i]>=123-x && tekst[i]<=122)
-                tekst[i]=int(tekst[i])-26+x; //male litery
+//            if(tekst[i]>=65 && tekst[i]<=90-this->key)
+//                tekst[i]=int(tekst[i])+this->key; //wielkie liter
+//            else if(tekst[i]>=91-this->key && tekst[i]<=90)
+//                tekst[i]=int(tekst[i])-26+this->key; // wielkie litery
+//            else if(tekst[i]>=97 && tekst[i]<=122-this->key)
+//                tekst[i]=int(tekst[i])+this->key; //male liter
+//            else if(tekst[i]>=123-this->key && tekst[i]<=122)
+//                tekst[i]=int(tekst[i])-26+this->key; //male litery
+
+tekst[i] = tekst[i] + this->key;
         }
         cout << tekst<<endl;
         plik<< tekst <<endl;
