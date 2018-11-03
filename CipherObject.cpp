@@ -9,11 +9,11 @@ using namespace std;
 
 CipherObject::CipherObject()
 {
-    cout<<"Konstruktor"<<endl;
+cout<<"Constructor"<<endl;
 }
 CipherObject::~CipherObject()
 {
-cout<<"Destruktor"<<endl;
+cout<<"Destructor"<<endl;
 }
 CipherObject::Encrypt()
 {
@@ -41,7 +41,7 @@ this->LoadFile(fileName);
 
 string sciezka = "";
 
-        cout << "...Szyfrowanie";
+        cout << "...Crypt";
     Sleep(500);
     cout<<".";
     Sleep(500);
@@ -52,9 +52,8 @@ string sciezka = "";
     this->plik.open(sciezka+fileName, ios::out | ios::trunc );
     for( int j = 0; j < this->text.size(); j++ )
     {
-        int x = 8;
         string tekst;
-//        cout << tab[ i ] << endl;
+        cout << this->text[ i ] << endl;
         tekst = this->text[j];
         for(int i=0; i<=tekst.length(); i++)
         {

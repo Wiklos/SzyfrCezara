@@ -10,7 +10,6 @@ using namespace std;
 class CipherObject
 {
 int key;
-//string text;
 vector < string > text;
 fstream plik;
 
